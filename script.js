@@ -1,8 +1,6 @@
-document.querySelector('.results').style.display = 'none';
+document.querySelector('input').addEventListener('keyup', e => {
 
-document.querySelector('input').addEventListener('input', e => {
-
-  let value = document.querySelector('input').value;
+  let value = e.target.value;
 
   document.querySelector('.results').style.display = 'none';
 

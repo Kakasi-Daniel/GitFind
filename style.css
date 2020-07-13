@@ -128,6 +128,14 @@ img{
   font-size: 1.3rem;
 }
 
+.user_name{
+  text-align: center;
+}
+
+.reposTitle{
+  text-align: center;
+}
+
 .view_project{
   color: #fff;
   text-decoration: none;
@@ -137,4 +145,28 @@ img{
   display: inline-block;
   border-radius: 10px;
   border: 1px #fff solid;
+}
+
+.results{
+  display: none;
+}
+
+
+@media(min-width:600px){
+  .results{
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 50px;
+  }
+
+  .left{
+    margin-right: 20px;
+    margin-top: 40px;
+    width: 35%;
+  }
+
+  .right{
+    flex: 1;
+  }
 }
