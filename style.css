@@ -170,3 +170,15 @@ img{
     flex: 1;
   }
 }
+
+.yellow{
+  border: 1px solid rgb(230, 230, 70);
+}
+
+.red{
+  border: 1px solid rgb(156, 79, 56);
+}
+
+.blue{
+  border: 1px solid rgb(66, 118, 196);
+}

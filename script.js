@@ -1,3 +1,22 @@
+function bcolor(language){
+
+  if (language === "JavaScript"){
+    return 'yellow';
+  }
+  else if (language === "Python"){
+    return 'yellow';
+  }
+  else if(language === "HTML" || language === "Java"){
+    return 'red';
+  }
+  else if(language === "CSS" || language === "C"){
+    return 'blue';
+  }else{
+    return '';
+  }
+
+}
+
 document.querySelector('input').addEventListener('keyup', e => {
 
   let value = e.target.value;
@@ -22,8 +41,9 @@ document.querySelector('input').addEventListener('keyup', e => {
         .then(reposData => {
           let output = '';
           reposData.forEach(repo => {
+            console.log(repo.language === "Python");
             output += `
-            <div class="repo">
+            <div class="repo ${bcolor(repo.language)}">
             <div>
               <div class="repo_name">${repo.name}</div>
             <a class="view_project" href="${repo.html_url}" target="_blank">Go to project &rarr; </a>
@@ -38,3 +58,5 @@ document.querySelector('input').addEventListener('keyup', e => {
     });
 
 })
+
+
